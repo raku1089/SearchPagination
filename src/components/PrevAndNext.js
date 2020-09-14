@@ -1,16 +1,17 @@
 import React from "react";
-
+import "../App.css";
 const PrevAndNext = (props) => {
   return (
-    <div>
+    <>
       <button
         onClick={props.handleClick}
         value={props.value}
         disabled={props.isDisabled}
+        className={props.active}
       >
         {props.btnName}
       </button>
-    </div>
+    </>
   );
 };
 PrevAndNext.defaultProps = {

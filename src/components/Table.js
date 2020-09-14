@@ -7,11 +7,6 @@ class Table extends Component {
     super(props);
     this.state = { current: 1 };
   }
-  handlePageChange = (pageNumber) => {
-    this.setState({
-      current: pageNumber,
-    });
-  };
 
   getCurrentVisibleData = (current) => {
     const { maxVisiblePages, data } = this.props;
@@ -21,11 +16,9 @@ class Table extends Component {
       : data;
   };
   render() {
-    const { total, maxVisiblePages, data } = this.props;
-    const { current } = this.state;
+    const { total, maxVisiblePages, current } = this.props;
     const currentVisibleData = this.getCurrentVisibleData(current);
 
-    console.log(data, "all", currentVisibleData);
     let toShow = <p>No Result Foound!</p>;
     if (currentVisibleData.length > 0) {
       toShow = (
@@ -58,7 +51,7 @@ class Table extends Component {
             <Pagination
               current={current}
               total={total}
-              handlePageChange={this.handlePageChange}
+              handlePageChange={this.props.handlePageChange}
               maxVisiblePages={maxVisiblePages}
             />
           </div>

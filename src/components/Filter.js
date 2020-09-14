@@ -18,6 +18,12 @@ class Filter extends Component {
       .then((data) => this.setState({ allData: data }));
   }
 
+  handlePageChange = (pageNumber) => {
+    this.setState({
+      current: pageNumber,
+    });
+  };
+
   textChangleHandler = (e) => {
     const { allData } = this.state;
     const { value } = e.target;
@@ -48,7 +54,6 @@ class Filter extends Component {
           item.capital.toLowerCase().includes(textToFind)
       );
     }
-    debugger;
     this.setState({
       filteredResult: sortedRsult,
       current: 1,
@@ -62,15 +67,16 @@ class Filter extends Component {
       dataToShow = searchText.length > 2 ? filteredResult : allData;
     }
 
-    //allD
     return (
       <div className="filterPage">
         <div className="searchWrapper">
           <h3>Table Mockup</h3>{" "}
           <input
+            className="textB"
+            autoFocus
             type="text"
             onChange={(e) => this.textChangleHandler(e)}
-            placeholder="Enter 3 char to serch"
+            placeholder="Enter 3 charecter to search"
           />
         </div>
         {allData.length && (
@@ -79,6 +85,7 @@ class Filter extends Component {
             total={dataToShow.length}
             maxVisiblePages={15}
             current={current}
+            handlePageChange={this.handlePageChange}
           />
         )}
       </div>

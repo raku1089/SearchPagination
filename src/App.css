@@ -58,15 +58,22 @@
   border-collapse: collapse;
   margin-left: 1%;
 }
+.textB {
+  border: 1px solid peru;
+  width: 180px;
+  height: 25px;
+}
 tr,
 td {
   border: 1px solid #000;
   text-align: start;
+  overflow: scroll;
 }
 .pageination {
   display: flex;
   justify-content: center;
-  width: 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
 }
 
 .paginationWrapper {
@@ -75,10 +82,14 @@ td {
   position: relative;
   top: 10px;
 }
+.btnActive {
+  background-color: peru;
+}
 button {
   font-size: 12px;
   background-color: lightblue;
   border: 1px solid peru;
   width: 40px;
   cursor: pointer;
+  outline: none;
 }
