@@ -36,3 +36,49 @@
     transform: rotate(360deg);
   }
 }
+.filterPage {
+  width: 100%;
+}
+.searchWrapper {
+  text-align: start;
+  padding: 0 10px;
+  outline: none;
+}
+
+.tableWrapper {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+.tableWrapper {
+  table-layout: fixed;
+  width: 98%;
+  text-align: start;
+  align-items: center;
+  border-collapse: collapse;
+  margin-left: 1%;
+}
+tr,
+td {
+  border: 1px solid #000;
+  text-align: start;
+}
+.pageination {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.paginationWrapper {
+  width: 100%;
+  display: flex;
+  position: relative;
+  top: 10px;
+}
+button {
+  font-size: 12px;
+  background-color: lightblue;
+  border: 1px solid peru;
+  width: 40px;
+  cursor: pointer;
+}
