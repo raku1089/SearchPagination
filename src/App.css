@@ -67,7 +67,7 @@ tr,
 td {
   border: 1px solid #000;
   text-align: start;
-  overflow: scroll;
+  overflow-x: scroll;
 }
 .pageination {
   display: flex;
@@ -84,6 +84,11 @@ td {
 }
 .btnActive {
   background-color: peru;
+  color: aqua;
+}
+.btnDisabled {
+  background-color: lightgray;
+  color: lightslategrey;
 }
 button {
   font-size: 12px;
@@ -92,4 +97,5 @@ button {
   width: 40px;
   cursor: pointer;
   outline: none;
+  color: black;
 }

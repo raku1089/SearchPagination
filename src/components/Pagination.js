@@ -16,7 +16,7 @@ const Pagination = (props) => {
         isDisabled={current <= 1}
         btnName="Prev"
         value={1}
-        active={current === 1 && "btnActive"}
+        active={current === 1 && "btnDisabled"}
       />
 
       {[...Array(Math.floor(total / maxVisiblePages))].map((pageNumber, i) => {
